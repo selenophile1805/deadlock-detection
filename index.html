@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Detection Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Deadlock Detection Simulator</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <section class="controls">
+                    <button onclick="addProcess()"><i class="fas fa-plus"></i> Add Process</button>
+                    <button onclick="addResource()"><i class="fas fa-cube"></i> Add Resource</button>
+                    <button onclick="simulate()"><i class="fas fa-play"></i> Simulate</button>
+                    <button onclick="reset()"><i class="fas fa-redo"></i> Reset</button>
+                </section>
+                <section class="available-resources">
+                    <h2>Available Resources</h2>
+                    <div id="availableResources"></div>
+                </section>
+            </div>
+            <div class="content">
+                <section class="allocation">
+                    <h2>Resource Allocation</h2>
+                    <div class="table-container">
+                        <table id="allocationTable">
+                            <thead>
+                                <tr>
+                                    <th>Process</th>
+                                    <th>Allocated</th>
+                                    <th>Max</th>
+                                    <th>Need</th>
+                                </tr>
+                            </thead>
+                            <tbody id="allocationBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="result">
+                    <h2>Simulation Result</h2>
+                    <pre id="result"></pre>
+                </section>
+                <section class="system-state">
+                    <h2>System State</h2>
+                    <div id="systemState"></div>
+                </section>
+                <section class="graph">
+                    <h2>Resource Allocation Graph</h2>
+                    <div id="graph"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Made by Chetan and Sriram</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
